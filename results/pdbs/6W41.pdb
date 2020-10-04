@@ -10,9 +10,10 @@ COMPND   6 MOLECULE: CR3022 FAB LIGHT CHAIN;
 COMPND   7 CHAIN: L;                                                            
 COMPND   8 ENGINEERED: YES;                                                     
 COMPND   9 MOL_ID: 3;                                                           
-COMPND  10 MOLECULE: SPIKE GLYCOPROTEIN RECEPTOR BINDING DOMAIN;                
+COMPND  10 MOLECULE: SPIKE PROTEIN S1;                                          
 COMPND  11 CHAIN: C;                                                            
-COMPND  12 ENGINEERED: YES                                                      
+COMPND  12 FRAGMENT: RECEPTOR BINDING DOMAIN;                                   
+COMPND  13 ENGINEERED: YES                                                      
 SOURCE    MOL_ID: 1;                                                            
 SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   
 SOURCE   3 ORGANISM_COMMON: HUMAN;                                              
@@ -30,24 +31,31 @@ SOURCE  14 EXPRESSION_SYSTEM_TAXID: 9606;
 SOURCE  15 MOL_ID: 3;                                                           
 SOURCE  16 ORGANISM_SCIENTIFIC: SEVERE ACUTE RESPIRATORY SYNDROME CORONAVIRUS   
 SOURCE  17 2;                                                                   
-SOURCE  18 ORGANISM_COMMON: SARS-COV-2,2019-NCOV,COVID-19 VIRUS;                
+SOURCE  18 ORGANISM_COMMON: 2019-NCOV;                                          
 SOURCE  19 ORGANISM_TAXID: 2697049;                                             
-SOURCE  20 EXPRESSION_SYSTEM: TRICHOPLUSIA NI;                                  
-SOURCE  21 EXPRESSION_SYSTEM_COMMON: CABBAGE LOOPER;                            
-SOURCE  22 EXPRESSION_SYSTEM_TAXID: 7111;                                       
-SOURCE  23 EXPRESSION_SYSTEM_VECTOR_TYPE: BACULOVIRUS                           
+SOURCE  20 GENE: S, 2;                                                          
+SOURCE  21 EXPRESSION_SYSTEM: TRICHOPLUSIA NI;                                  
+SOURCE  22 EXPRESSION_SYSTEM_COMMON: CABBAGE LOOPER;                            
+SOURCE  23 EXPRESSION_SYSTEM_TAXID: 7111;                                       
+SOURCE  24 EXPRESSION_SYSTEM_VECTOR_TYPE: BACULOVIRUS                           
 KEYWDS    ANTIBODY, VIRUS, COMPLEX, SARS-COV-2, IMMUNE SYSTEM, IMMUNE SYSTEM-   
 KEYWDS   2 VIRAL PROTEIN COMPLEX                                                
 EXPDTA    X-RAY DIFFRACTION                                                     
 AUTHOR    M.YUAN,N.C.WU,X.Y.ZHU,I.A.WILSON                                      
+REVDAT   6   29-JUL-20 6W41    1       COMPND REMARK HETNAM LINK                
+REVDAT   6 2                   1       SITE                                     
+REVDAT   5   20-MAY-20 6W41    1       JRNL                                     
+REVDAT   4   06-MAY-20 6W41    1       COMPND SOURCE DBREF  SEQADV              
+REVDAT   3   15-APR-20 6W41    1       JRNL                                     
 REVDAT   2   08-APR-20 6W41    1       JRNL                                     
 REVDAT   1   25-MAR-20 6W41    0                                                
-JRNL        AUTH   M.YUAN,N.C.WU,X.Y.ZHU,C.C.D.LEE,R.T.Y.SO,H.LV,C.K.P.MOK,     
+JRNL        AUTH   M.YUAN,N.C.WU,X.ZHU,C.D.LEE,R.T.Y.SO,H.LV,C.K.P.MOK,         
 JRNL        AUTH 2 I.A.WILSON                                                   
-JRNL        TITL   A HIGHLY CONSERVED CRYPTIC EPITOPE IN THE RECEPTOR-BINDING   
-JRNL        TITL 2 DOMAINS OF SARS-COV-2 AND SARS-COV                           
-JRNL        REF    SCIENCE                                    2020              
+JRNL        TITL   A HIGHLY CONSERVED CRYPTIC EPITOPE IN THE RECEPTOR BINDING   
+JRNL        TITL 2 DOMAINS OF SARS-COV-2 AND SARS-COV.                          
+JRNL        REF    SCIENCE                       V. 368   630 2020              
 JRNL        REFN                   ESSN 1095-9203                               
+JRNL        PMID   32245784                                                     
 JRNL        DOI    10.1126/SCIENCE.ABB7269                                      
 REMARK   2                                                                      
 REMARK   2 RESOLUTION.    3.08 ANGSTROMS.                                       
@@ -348,27 +356,17 @@ REMARK 500    ASP C 428       52.21    -91.73
 REMARK 500    PHE C 497       79.17   -100.49                                   
 REMARK 500                                                                      
 REMARK 500 REMARK: NULL                                                         
-REMARK 800                                                                      
-REMARK 800 SITE                                                                 
-REMARK 800 SITE_IDENTIFIER: AC1                                                 
-REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
-REMARK 800 SITE_DESCRIPTION: binding site for residue GOL L 301                 
-REMARK 800                                                                      
-REMARK 800 SITE_IDENTIFIER: AC2                                                 
-REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
-REMARK 800 SITE_DESCRIPTION: binding site for residue SO4 L 302                 
-REMARK 800                                                                      
-REMARK 800 SITE_IDENTIFIER: AC3                                                 
-REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
-REMARK 800 SITE_DESCRIPTION: binding site for residue SO4 L 303                 
-REMARK 800                                                                      
-REMARK 800 SITE_IDENTIFIER: AC4                                                 
-REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
-REMARK 800 SITE_DESCRIPTION: binding site for Mono-Saccharide NAG C 601 bound   
-REMARK 800  to ASN C 343                                                        
 DBREF  6W41 H    1   216  PDB    6W41     6W41             1    216             
 DBREF  6W41 L    1   215  PDB    6W41     6W41             1    215             
-DBREF  6W41 C  319   549  PDB    6W41     6W41           319    549             
+DBREF  6W41 C  319   541  UNP    P0DTC2   SPIKE_SARS2    319    541             
+SEQADV 6W41 SER C  542  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 GLY C  543  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  544  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  545  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  546  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  547  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  548  UNP  P0DTC2              EXPRESSION TAG                 
+SEQADV 6W41 HIS C  549  UNP  P0DTC2              EXPRESSION TAG                 
 SEQRES   1 H  222  GLN MET GLN LEU VAL GLN SER GLY THR GLU VAL LYS LYS          
 SEQRES   2 H  222  PRO GLY GLU SER LEU LYS ILE SER CYS LYS GLY SER GLY          
 SEQRES   3 H  222  TYR GLY PHE ILE THR TYR TRP ILE GLY TRP VAL ARG GLN          
@@ -428,7 +426,7 @@ HET    SO4  L 303       5
 HET    NAG  C 601      14                                                       
 HETNAM     GOL GLYCEROL                                                         
 HETNAM     SO4 SULFATE ION                                                      
-HETNAM     NAG N-ACETYL-D-GLUCOSAMINE                                           
+HETNAM     NAG 2-ACETAMIDO-2-DEOXY-BETA-D-GLUCOPYRANOSE                         
 HETSYN     GOL GLYCERIN; PROPANE-1,2,3-TRIOL                                    
 FORMUL   4  GOL    C3 H8 O3                                                     
 FORMUL   5  SO4    2(O4 S 2-)                                                   
@@ -519,11 +517,6 @@ CISPEP   2 GLU H  148    PRO H  149          0        -3.68
 CISPEP   3 SER L    7    PRO L    8          0        -2.52                     
 CISPEP   4 THR L   94    PRO L   95          0         2.46                     
 CISPEP   5 TYR L  140    PRO L  141          0         1.15                     
-SITE     1 AC1  8 PRO H 167  VAL H 169  SER H 177  LEU H 178                    
-SITE     2 AC1  8 SER H 179  SER L 162  SER L 176  THR L 178                    
-SITE     1 AC2  2 LYS L  39  GLN L  42                                          
-SITE     1 AC3  3 PRO L   8  ASP L   9  SER L  10                               
-SITE     1 AC4  2 ASN C 343  VAL C 367                                          
 CRYST1  147.535  147.535  200.156  90.00  90.00  90.00 P 41 2 2      8          
 ORIGX1      1.000000  0.000000  0.000000        0.00000                         
 ORIGX2      0.000000  1.000000  0.000000        0.00000                         
@@ -5519,5 +5512,5 @@ CONECT 4936 4929
 CONECT 4937 4926 4930                                                           
 CONECT 4938 4931                                                                
 CONECT 4939 4932                                                                
-MASTER      317    0    4   11   60    0    5    6 4936    3   49   53          
+MASTER      299    0    4   11   60    0    0    6 4936    3   49   53          
 END                                                                             
