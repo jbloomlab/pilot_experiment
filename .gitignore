@@ -2,3 +2,4 @@
 !.gitignore
 !.gitattributes
 !.gitconfig
+.DS_Store
